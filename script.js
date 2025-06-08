@@ -1,9 +1,15 @@
 function minDate(dates) {
-  //write you code here
+  // Copy the array to avoid modifying the original
+  const datesCopy = [...dates];
+
+  // Use the built-in sort method to sort lexicographically
+  datesCopy.sort();
+
+  // The first date in the sorted array is the minimum
+  return datesCopy[0];
 }
 
 // Do not change the code
-
 var dates = [
   "2023/03/01",
   "2023/03/02",
@@ -34,7 +40,7 @@ var dates = [
   "2023/03/27",
   "2023/03/28",
   "2023/03/29",
-  "2023/03/30",
+  "2023/03/30", 
 ];
 
 alert(minDate(dates));
